@@ -1,0 +1,571 @@
+$text-color: #fff;
+$texter-color: #AFB1B8;
+$mud-color: #F5F4FA;
+$muder-color: #212121;
+$color-color: #2196F3;
+$colour-color: #757575;
+$hew-color: #2F303A;
+
+@mixin size($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin center($flex, $center){
+    display: $flex;
+    justify-content: $center;
+}
+@mixin prosto($aligh, $family, $size, $style, $weight, $line-height, $letter-spacing){
+    text-align: $aligh;
+    font-family: $family;
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+
+body{
+    background: white;
+    margin:0;
+}
+.container{
+    width: 1200px;
+    padding: 0px 15px 0px 15px;
+    margin: 0 auto;
+}
+   
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+/*Header*/
+.header-console {
+    height: 80px;
+    @include center($flex: flex,$center: center);
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+   
+.header-console__content-box {
+    @include center($flex: flex,$center: center);
+    align-items: center;
+    gap: 318px;
+    margin: 0;
+    padding: 0;
+}
+.header-console__section {
+    @include center($flex: flex, $center: center);
+    align-items: center;
+    gap: 93px;
+}
+.header-console__logo {
+    @include size($width: 145px, $height: 31px);
+    flex-shrink: 0;
+}
+.header-console__navigation {
+    @include center($flex: flex, $center: center);
+    align-items: center;
+}
+.header-console__menu {
+    @include center($flex: flex, $center: center);
+    gap: 50px;
+}
+.header-console__option {
+    color: $muder-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 500, $line-height: normal, 
+    $letter-spacing: 0.28px);
+}
+.header-console__option:nth-child(1) .header-console__option-link:visited {
+    color: $color-color;
+}
+.header-console__option-link:hover {
+    color: $color-color;
+}
+.header-console__information {
+    @include center($flex: flex, $center: center);
+    align-items: center;
+    gap: 50px;
+}
+.header-console__info {
+    color: $colour-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 500, $line-height: normal, 
+    $letter-spacing: 0.28px);
+    @include center($flex: flex, $center: center);
+    gap: 10px;
+}
+.header-console__info:hover {
+    color: $color-color;
+}
+/*Main*/
+.services {
+    height: 600px;
+    margin: 0;
+    background-image: url("../src/image/img/Img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include center($flex: flex, $center: center);
+    align-items: center;
+}
+.services__content-box {
+    @include center($flex: flex, $center: center);
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.services__title {
+    width: 696px;
+    color: $text-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 44px, $style: normal, 
+    $weight: 900, $line-height: 60px, 
+    $letter-spacing: 2.64px);
+    text-transform: uppercase;
+}
+.services__button {
+    @include size($width: 216px, $height: 50px);
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: $color-color;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    color: $text-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 16px, $style: normal, 
+    $weight: 700, $line-height: normal, 
+    $letter-spacing: 0.96px);
+}
+.services__button:hover {
+    box-shadow: 0px 0px 20px 13px $text-color;
+}
+/* Main box 1 */
+.achievement {
+    margin: 0;
+    @include center($flex: flex, $center: center);
+    align-items: center;
+    padding: 94px 0px 94px 0px;
+}
+.achievement__content-box {
+    @include center($flex: flex, $center: center);
+    gap: 30px;
+}
+.achievement__dodatok{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.achievement__element {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.achievement__element::before {
+    content: "";
+    @include size($width: 270px, $height: 120px);
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: $mud-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:70px 70px;
+    margin-bottom: 30px;
+}
+.achievement__element:nth-child(1)::before {
+    background-image: url("../image/img/section2/antenna1.png");
+}
+.achievement__element:nth-child(2)::before {
+    background-image: url("../image/img/section2/clock1.png");
+}
+.achievement__element:nth-child(3)::before {
+    background-image: url("../image/img/section2/diagram1.png");
+}
+.achievement__element:nth-child(4)::before {
+    background-image: url("../image/img/section2/astronaut1.png");
+}
+.achievement__element-title {
+    color: $muder-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 700, $line-height: normal, 
+    $letter-spacing: 0.42px);
+    text-transform: uppercase;
+}
+.achievement__element-paragraf {
+    color: $colour-color;
+    @include prosto($aligh: left, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 500, $line-height: 24px, 
+    $letter-spacing: 0.42px);
+}
+/* Main box 2 */
+.work {
+    margin: 0;
+    padding-bottom: 94px;
+    @include center($flex: flex, $center: center);
+    align-items: start;
+}
+.work__content-box {
+    @include center($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.work__title {
+    color: $muder-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 36px, $style: normal, 
+    $weight: 700, $line-height: normal, 
+    $letter-spacing: 1.08px);
+}
+.work__image-box {
+    @include center($flex: flex, $center: space-between);
+    align-items: center;
+    gap: 30px;
+}
+.work__image {
+    @include size($width: 370px, $height: 294px);
+    flex-shrink: 0;
+}
+/* Main box 3 */
+.team {
+    padding: 94px 0;
+    background: $mud-color;
+}
+.team__content-box {
+    @include center($flex: flex, $center: space-between);
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.team__title {
+    color: $muder-color;
+    @include prosto(
+    $aligh: center,
+    $family: Roboto,
+    $size: 36px,
+    $style: normal,
+    $weight: 700,
+    $line-height: normal,
+    $letter-spacing: 1.08px
+ );
+}
+.team__info-box {
+    @include center($flex: flex, $center: space-between);
+    align-items: center;
+    gap: 30px;
+}
+.team__dodatok{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.team__info-element {
+    margin-top: 30px;
+    box-sizing: content-box;
+    width: 270px;
+    flex-shrink: 0;
+    @include center($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-radius: 0px 0px 4px 4px;
+    background: $text-color;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+.team__image {
+    @include size($width: 270px, $height: 260px);
+    flex-shrink: 0;
+}
+.team__info-container {
+    @include center($flex: flex, $center: space-between);
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.team__text-box {
+    @include center($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.team__name {
+    color: $muder-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 16px, $style: normal, 
+    $weight: 500, $line-height: normal, 
+    $letter-spacing: 0.48px);
+}
+.team__paragraf {
+    color: $colour-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 16px, $style: normal, 
+    $weight: 400, $line-height: normal, 
+    $letter-spacing: 0.48px);
+}
+.team__social-networks-box {
+    @include center($flex: flex, $center: space-between);
+    align-items: center;
+    gap: 10px;
+}
+/* Company */
+.user {
+    height: 372px;
+    margin: 0;
+    @include center($flex: flex, $center: center);
+    align-items: center;
+}
+.user__content-box {
+    @include center($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.user__title {
+    color: $muder-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 36px, $style: normal, 
+    $weight: 700, $line-height: normal, 
+    $letter-spacing: 1.08px);
+}
+.user__company-box {
+    @include center($flex: flex, $center: center);
+    align-items: center;
+    gap: 30px;
+}
+.user__widprawnik{
+    
+}
+.user__dodatok{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+/* END Company */
+/* Footer box   */
+.footer-info {
+    background: $hew-color;
+    padding: 70px;
+    @include center($flex: flex, $center: center);
+    align-items: center;
+}
+.footer-info__content-box {
+    @include center($flex: flex, $center: start);
+    align-items: center;
+    gap: 93px;
+}
+.footer-info__info-box {
+    @include center($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.footer-info__logo {
+    @include size($width: 145px, $height: 31px);
+}
+.footer-info__adress-box {
+    @include center($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: start;
+    gap: 9px;
+}
+.footer-info__adress {
+    color: $text-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 400, $line-height: 24px, 
+    $letter-spacing: 0.42px);
+}
+.footer-info__contact {
+    @include center($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: start;
+    gap: 9px;
+}
+.footer-info__link-contact {
+    color: rgba(255, 255, 255, 0.60);
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 400, $line-height: 24px, 
+    $letter-spacing: 0.42px);
+}
+.footer-info__link-contact:hover {
+    color: $color-color;
+}
+.footer-info__subscribe-box {
+    @include center($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.footer-info__title-subscribe {
+    color: $text-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 700, $line-height: normal, 
+    $letter-spacing: 0.42px);
+    text-transform: uppercase;
+}
+.footer-info__social-networks-box {
+    @include center($flex: flex, $center: start);
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-in__indo{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-in__indoo{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+.footer-in__indo{
+   
+}
+
+.footer-info__nazva{
+    align-items: center;
+}
+.footer-info__nazva-link{
+    @include prosto($aligh: left, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 700, $line-height: normal, 
+    $letter-spacing: 0px);
+    color: $text-color;
+    text-transform: uppercase;
+}
+
+.footer-info__text-input{
+    background-color: $hew-color;
+    // padding: 20px;
+}
+
+.footer-info__form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+input{
+    padding: 15px 16px;
+    width: 358px;
+    border-radius: 5px;
+    background-color: $hew-color;
+}
+
+.footer-info__button{
+    
+}
+.footer-info__button-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(33, 150, 243, 1);
+    padding: 10px 50px;
+    border: 0.1px;
+    border-radius: 5px;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 16px, $style: normal, 
+    $weight: 700, $line-height: 30px, 
+    $letter-spacing: 0px);
+    color: $text-color;
+}
+
+@media (max-width: 768px) {
+   .container{
+    width: 738px;
+   }
+   .header-console__information{
+    flex-direction: column;
+    gap: 10px;
+   }
+   .header-console__content-box{
+    gap: 96px;
+   }
+   .header-console__section{
+    gap: 51px;
+   }
+   .achievement__content-box{
+    flex-direction: column;
+   }
+   .work{
+    display: none;
+   }
+   .team__info-box {
+    flex-direction: column;
+
+   }
+   .user__widprawnik{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+   }
+   .footer-info__content-box{
+    flex-direction: column;
+   }
+   .footer-in__indoo{
+    gap: 234px;
+   }
+   .footer-in__indo{
+    align-items: center;
+   }
+   .footer-info__form{
+    flex-direction: column;
+   }
+}
+@media (max-width: 480px) {
+    .container{
+        width: 450px;
+    }
+    .header-console__information{
+      display: none;
+    }
+    .header-console__content-box{
+            display: none;
+           }
+    .header-console__section{
+            display: none;
+           }
+    .achievement__dodatok{
+        flex-direction: column;
+
+    }
+    .achievement__element::before{
+        width: 100%;
+    }
+    .achievement__element-title{
+        width: 100%;
+    }
+    .team__info-element{
+        width: 175%;
+        height: 175%;
+    }
+    
+    .team__dodatok{
+        flex-direction: column;
+    }
+    .footer-in__indoo{
+        flex-direction: column;
+        gap: 60px;
+    }
+    .user__widprawnik{
+        width: 20%;
+    }
+}
